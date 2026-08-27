@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Thorn &amp; Furrow">
+  <rect width="32" height="32" rx="7" fill="#3A4A38"/>
+  <g fill="#F6F4F0">
+    <!-- Thorn on the left arm of the T -->
+    <polygon points="7.2,7.1 10.6,7.1 10.6,10.4 8.6,12.2"/>
+    <!-- T crossbar -->
+    <rect x="7.2" y="7.1" width="17.6" height="3.15" rx="0.35"/>
+    <!-- T stem -->
+    <rect x="14.35" y="7.1" width="3.3" height="13.4"/>
+    <!-- Stem foot -->
+    <rect x="12.15" y="18.35" width="7.7" height="2.15" rx="0.25"/>
+    <!-- Furrows -->
+    <polygon points="8.1,22.9 23.9,22.9 23.1,24.55 8.9,24.55"/>
+    <polygon points="8.1,25.95 23.9,25.95 23.1,27.6 8.9,27.6"/>
+  </g>
+</svg>

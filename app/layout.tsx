@@ -5,7 +5,7 @@ import "./globals.css"
 
 export const metadata: Metadata = {
   title: {
-    default: "Thorn & Furrow — heirloom seed from the Hudson Valley",
+    default: "Thorn & Furrow",
     template: "%s | Thorn & Furrow",
   },
   description: "A small catalog of vegetables we still grow out ourselves, plus a seasonal journal and workshops at the farm.",
