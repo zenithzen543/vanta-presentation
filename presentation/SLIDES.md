@@ -1,28 +1,29 @@
 # Presentation
 
-**What this is:** a public marketing website (seed catalog), **not** a SaaS app. Stack: Next.js, Sanity, Vercel.  
-**Walkthrough (10 min):** slides 1–11.  
-**If they have time (slides 12–17):** Jamb then Slingshot Bio — public business only. No Studio.  
-**Read:** [Mentor-Guide.docx](Mentor-Guide.docx) first, then [SCRIPT.txt](SCRIPT.txt).
+**Deck:** [Thorn-and-Furrow-Portfolio.pptx](Thorn-and-Furrow-Portfolio.pptx) — **15 slides**. That is the file on the projector.  
+There is **no** “Not a SaaS” slide and **no** stack slide. The title names Next.js App Router, Sanity, and TypeScript.
 
-Two windows: catalog `http://localhost:3000` and Studio `http://localhost:3000/studio` (logged in). If you run long, skip slide 10 (decisions). Do not skip slides 2–3.
+**What this is:** a public marketing catalog (heirloom seed), not a SaaS app.  
+**Walkthrough (10 min):** slides 1–9.  
+**If they have time (slides 10–15):** Jamb then Slingshot Bio — public business only. No Studio.  
+**Read:** [Mentor-Guide.docx](Mentor-Guide.docx), then [SCRIPT.txt](SCRIPT.txt). Panel answers: [Interview-Assistant-Note.txt](Interview-Assistant-Note.txt).
+
+Live catalog on the title/types slide: Vercel URL. Local: `http://localhost:3000` and Studio `http://localhost:3000/studio`. If you run long, skip slide 8 (decisions).
 
 | Time | Slide | Beat |
 |---|---|---|
-| 0:00–0:25 | 1 Title | Marketing site, not SaaS. This catalog I can open. |
-| 0:25–1:05 | 2 Not a SaaS | Login app vs public catalog |
-| 1:05–1:50 | 3 The stack | Next.js, Sanity, Vercel |
-| 1:50–2:25 | 4 The job | I own the types. They own the catalog. |
-| 2:25–3:00 | 5 Product | Four surfaces. No cart. |
-| 3:00–3:35 | 6 Why this shape | Documents, composition, event IDs |
-| 3:35–4:25 | 7 Architecture | Studio → GROQ → Next.js → ISR |
-| 4:25–5:00 | 8 Content model | Five documents |
-| 5:00–7:40 | 9 Live demo | Home, packet, publish, tracking |
-| 7:40–8:20 | 10 Decisions | Five calls you would make again |
-| 8:20–8:50 | 11 Close | One line. Stop here if they only have ten minutes. |
-| 8:50–9:05 | 12 NDA map | Jamb and Slingshot. Public only. |
-| 9:05–9:40 | 13 Jamb business | Who, inventory, sale |
-| 9:40–10:10 | 14 Jamb catalog | Fireplaces, lighting, furniture, journal |
-| 10:10–10:45 | 15 Slingshot business | Problem, product, who pays |
-| 10:45–11:15 | 16 Slingshot catalog | Home, how it works, shop |
-| 11:15–11:30 | 17 Stop | I cannot open those desks. Questions here. |
+| 0:00–0:40 | 1 Title | Live catalog on Next.js and Sanity |
+| 0:40–1:30 | 2 Types vs catalog | I own the types. They own the catalog. |
+| 1:30–2:10 | 3 What visitors see | Four surfaces. No cart. |
+| 2:10–2:50 | 4 Why this shape | Documents, composition, event IDs |
+| 2:50–3:35 | 5 Editor to production | Studio → GROQ → Next.js → ISR |
+| 3:35–4:10 | 6 Five documents | Change Icehouse once |
+| 4:10–6:40 | 7 Live demo | Home, packet, publish, tracking |
+| 6:40–7:20 | 8 Decisions | Five calls you would make again |
+| 7:20–7:45 | 9 Close | One line. Stop here if they only have ten minutes. |
+| 7:45–8:00 | 10 Work I cannot open | Jamb and Slingshot. Public only. |
+| 8:00–8:35 | 11 Jamb business | Who, inventory, sale |
+| 8:35–9:05 | 12 Jamb collections | Fireplaces, lighting, furniture, journal |
+| 9:05–9:40 | 13 Slingshot problem | Problem, product, who pays |
+| 9:40–10:10 | 14 Slingshot catalog | Home, how it works, shop |
+| 10:10–10:25 | 15 Stop | I cannot open those desks. Questions here. |

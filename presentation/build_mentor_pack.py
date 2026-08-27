@@ -14,58 +14,29 @@ MUTED = RGBColor(0x6B, 0x65, 0x60)
 
 BEATS = [
     {
-        "clock": "0:00–0:25",
+        "clock": "0:00–0:40",
         "slide": "1 · Title",
-        "do": "Deck on the projector. Catalog open at localhost:3000. Studio logged in on a second screen. Do not demo yet.",
+        "do": None,
         "say": (
-            "I am presenting a marketing website — not a SaaS product. "
-            "Next.js is the site. Sanity is the CMS. Vercel is where it deploys. "
-            "This catalog is Thorn and Furrow. I can open it. "
+            "This is Thorn and Furrow — a live heirloom-seed catalog on Next.js and Sanity. "
+            "Product, content model, publish loop. I can open this catalog. "
             "Two other live sites come after the close. I will not open their studios."
         ),
     },
     {
-        "clock": "0:25–1:05",
-        "slide": "2 · Not a SaaS",
-        "do": "Point at the two columns. SaaS on the left. This site on the right. Stay on the slide.",
+        "clock": "0:40–1:30",
+        "slide": "2 · I own the types. They own the catalog.",
+        "do": None,
         "say": (
-            "A normal SaaS is an app people log into. Dashboard, settings, roles, billing. The software is the product. "
-            "This is not that. Nobody logs in. There is no account. "
-            "This is a public marketing site for a real business — a farm that sells seed. "
-            "The pages are the catalog: packets, stories, a letter to order. "
-            "Marketers own the words and the stock. Engineering owns the types so those changes do not need a deploy. "
-            "The conversion is a packet-list request — a lead — not a SaaS signup."
-        ),
-    },
-    {
-        "clock": "1:05–1:50",
-        "slide": "3 · The stack",
-        "do": "Walk the three boxes: Next.js, then Sanity, then Vercel. Do not open code.",
-        "say": (
-            "Three tools. Next.js is the website — React, App Router, what visitors see. "
-            "Sanity is the CMS. Studio is the editor. Packets and homepage sections are documents, not a Word file. "
-            "Vercel is the host. Git push, a live URL, CDN, ISR. That is production for a Next.js site. "
-            "Editor publishes in Sanity. Next.js pulls the page. Vercel serves it. "
-            "That loop is what I am here to show."
-        ),
-    },
-    {
-        "clock": "1:50–2:25",
-        "slide": "4 · The job",
-        "do": "Stay on the pitch slide. Do not click the site yet.",
-        "say": (
-            "The farm packs seed March through June. This season is Catalog Number 14. "
-            "If a variety is listed, they grow it. "
+            "The farm packs seed March through June. Catalog Number 14 — if a variety is listed, they grow it. Seventeen packets, no ornamental fillers. "
             "Marketing does not wait on engineering for a new heading or a sold-out packet. Those are fields. "
-            "I own the types. They own the weekly catalog. "
-            "That is the same contract as any marketing site: structured content, page composition, caching, SEO, "
-            "and analytics that survive a copy change."
+            "I own the types. They own the weekly catalog. The season is a document, not a deploy."
         ),
     },
     {
-        "clock": "2:25–3:00",
-        "slide": "5 · What visitors see",
-        "do": "Point at the four cards, then glance at the live homepage if it is visible.",
+        "clock": "1:30–2:10",
+        "slide": "3 · What visitors see",
+        "do": None,
         "say": (
             "Visitors land on a homepage composed from Sanity sections — masthead, featured packet, sowing table, the spring list. "
             "Varieties is the catalog: seventeen packets grouped by family, the way a print catalog is grouped. "
@@ -74,8 +45,8 @@ BEATS = [
         ),
     },
     {
-        "clock": "3:00–3:35",
-        "slide": "6 · Why this shape",
+        "clock": "2:10–2:50",
+        "slide": "4 · Why this shape",
         "do": None,
         "say": (
             "I did not build a hero, a two-by-three feature grid, and a logo wall. That would look like homework. "
@@ -87,9 +58,9 @@ BEATS = [
         ),
     },
     {
-        "clock": "3:35–4:25",
-        "slide": "7 · Architecture",
-        "do": "Walk the five boxes left to right. Do not open code unless asked.",
+        "clock": "2:50–3:35",
+        "slide": "5 · Editor to production",
+        "do": None,
         "say": (
             "The path is simple. An editor publishes in Sanity Studio. "
             "Next.js pulls the page with GROQ through next-sanity. "
@@ -100,9 +71,9 @@ BEATS = [
         ),
     },
     {
-        "clock": "4:25–5:00",
-        "slide": "8 · Content model",
-        "do": "Name the five documents. Mention the Studio desk is labeled The farm.",
+        "clock": "3:35–4:10",
+        "slide": "6 · Five documents",
+        "do": None,
         "say": (
             "Five document types. Farm settings: name, nav, primary CTA, footer, default SEO. "
             "Catalog homepage: SEO plus an ordered section array. "
@@ -113,27 +84,23 @@ BEATS = [
         ),
     },
     {
-        "clock": "5:00–7:40",
-        "slide": "9 · Live demo",
-        "do": (
-            "Switch to the browser. (1) Homepage: masthead, Icehouse feature, sowing table, packet grid. "
-            "(2) Click Icehouse Tomato. (3) Studio → Catalog homepage → masthead heading → Publish → reload /. "
-            "(4) Hover Request a packet list and say the event ID."
-        ),
+        "clock": "4:10–6:40",
+        "slide": "7 · Live demo",
+        "do": None,
         "say": (
             "This is the site. Catalog Number 14, Spring 2026. The masthead is a section. "
             "The featured packet is a document — latin name, story, maturity, stock — not a dashboard widget. "
             "The sowing table is editorial and dated for zone 6a. "
             "The spring list is seventeen references to variety documents. Marketing reorders this list. I own the types. "
             "Icehouse Tomato: same document you just saw featured. App Router, static params, ISR. "
-            "In Studio, under Catalog homepage, I change the masthead heading and publish. Reload. The heading is live. That publish loop is the work. "
+            "In Studio, Catalog homepage, Catalog sections, Catalog masthead: I change the Heading and publish. Reload. The heading is live. That publish loop is the work. "
             "Request a packet list: the label is copy. The contract is eventId — hero_order, nav_order. Copy can change. GTM does not."
         ),
     },
     {
-        "clock": "7:40–8:20",
-        "slide": "10 · What I would defend",
-        "do": "Back to the deck. If Studio failed, say: seed fallback still rendered the catalog.",
+        "clock": "6:40–7:20",
+        "slide": "8 · What I would defend",
+        "do": None,
         "say": (
             "Five decisions I would make again. "
             "Server components and GROQ, not a client-side CMS fetch on every page. "
@@ -144,15 +111,15 @@ BEATS = [
         ),
     },
     {
-        "clock": "8:20–8:50",
-        "slide": "11 · Close",
-        "do": "One line. If they only have ten minutes, stop and take questions. Otherwise go to slide 12.",
+        "clock": "7:20–7:45",
+        "slide": "9 · Close",
+        "do": None,
         "say": "The catalog is the product. The CMS is how it changes without a deploy.",
     },
     {
-        "clock": "8:50–9:05",
-        "slide": "12 · NDA map",
-        "do": "Point at both public homepages. Do not open Studio. Then Jamb, then Slingshot.",
+        "clock": "7:45–8:00",
+        "slide": "10 · Work I cannot open",
+        "do": None,
         "say": (
             "Same pattern as an ads business: who buys, what is inventory, how a visit becomes a sale. Then where the CMS sits. "
             "Jamb is a Pimlico dealer. Slingshot Bio sells reagents to flow cytometry labs. "
@@ -160,9 +127,9 @@ BEATS = [
         ),
     },
     {
-        "clock": "9:05–9:40",
-        "slide": "13 · Jamb business",
-        "do": "Walk who, inventory, sale. Screenshot is the public homepage. No Studio.",
+        "clock": "8:00–8:35",
+        "slide": "11 · Jamb — who buys, what sells",
+        "do": None,
         "say": (
             "Jamb opened on Pimlico Road in 2001. The buyer is an interior designer, a collector, a country-house client — London, then Los Angeles, Chicago, Dallas, Atlanta, Palm Beach. "
             "Inventory is two things at once. Unique antiques: chimneypieces from the seventeenth century on, furniture, lighting. "
@@ -172,9 +139,9 @@ BEATS = [
         ),
     },
     {
-        "clock": "9:40–10:10",
-        "slide": "14 · Jamb catalog",
-        "do": "Name the four public collections. Do not invent schemas.",
+        "clock": "8:35–9:05",
+        "slide": "12 · Jamb — four public collections",
+        "do": None,
         "say": (
             "Four public surfaces, same contract as any marketing catalog. "
             "Fireplaces: antique chimneypieces and stone or marble reproductions, plus a bespoke service. "
@@ -185,9 +152,9 @@ BEATS = [
         ),
     },
     {
-        "clock": "10:10–10:45",
-        "slide": "15 · Slingshot business",
-        "do": "Walk the problem, then the product, then who pays. Screenshot is How Mimics Work. No Studio.",
+        "clock": "9:05–9:40",
+        "slide": "13 · Slingshot — the control problem",
+        "do": None,
         "say": (
             "Slingshot Bio sells to flow cytometry labs: biopharma, CROs, academic cores, cell therapy, instrument makers. "
             "The problem is the control. Donor cells expire and drift lot to lot. Polystyrene beads have the wrong scatter. "
@@ -198,9 +165,9 @@ BEATS = [
         ),
     },
     {
-        "clock": "10:45–11:15",
-        "slide": "16 · Slingshot catalog",
-        "do": "Home, how it works, shop. Name public surfaces only.",
+        "clock": "9:40–10:10",
+        "slide": "14 · Slingshot — catalog, argument, shop",
+        "do": None,
         "say": (
             "Three public surfaces. Homepage is the catalog of controls. "
             "How Mimics Work is the argument: not a biologic, not a bead. "
@@ -210,9 +177,9 @@ BEATS = [
         ),
     },
     {
-        "clock": "11:15–11:30",
-        "slide": "17 · Stop",
-        "do": "Stop. Invite questions on Thorn and Furrow, not on those studios.",
+        "clock": "10:10–10:25",
+        "slide": "15 · Stop",
+        "do": None,
         "say": (
             "I cannot open those desks. This catalog I can. "
             "Happy to go into schema, caching, or the order form — here."
@@ -295,105 +262,93 @@ def add_table(doc, headers, rows):
 SLIDES = [
     (
         "1 · Title",
-        "You are saying what this talk is: a marketing website, not a SaaS app.",
-        "Next.js is the site. Sanity is the CMS. Vercel is deploy. Thorn & Furrow is the catalog you can open. Two other sites come later; you will not open their CMS.",
-        "Do not start the demo yet. The deck is on the projector. The catalog is already open in a browser.",
+        "Thorn & Furrow is a live heirloom-seed catalog on Next.js and Sanity.",
+        "Product, content model, publish loop. This catalog I can open. Two other live sites come later; I will not open their studios.",
+        "The deck is Thorn-and-Furrow-Portfolio.pptx — 15 slides. Title names Next.js App Router, Sanity, TypeScript.",
     ),
     (
-        "2 · Not a SaaS",
-        "You are drawing a line: login app vs public catalog.",
-        "SaaS = people log in, the software is the product, success is signup. This site = nobody logs in, the catalog is the marketing surface, success is a packet-list request (a lead).",
-        "Point left then right. Stay on the slide.",
+        "2 · I own the types. They own the catalog.",
+        "Engineering owns schemas. Marketing owns the weekly catalog.",
+        "Catalog 14, 17 packets grown out, March–June, zone 6a Tivoli. A heading or sold-out packet is a field, not a deploy. The season is a document.",
+        "Live URL is on the slide. Studio is not this slide.",
     ),
     (
-        "3 · The stack",
-        "You are naming the three tools, in order.",
-        "Next.js draws the public pages. Sanity is the editor (Studio). Vercel hosts the site after a git push. Editor publishes → Next.js pulls → Vercel serves.",
-        "Walk the three boxes. Do not open code.",
+        "3 · What visitors see",
+        "Four public surfaces. Studio is not linked on the storefront.",
+        "Home is composed sections. Varieties is the catalog. Journal is field notes. Mail order is a letter, not a cart.",
+        "If they ask why no cart: qualified packet-list lead.",
     ),
     (
-        "4 · The job",
-        "You are explaining the work: marketers edit fields; you own the structure.",
-        "A farm sells 17 seed packets each spring. If a variety is listed, they grow it. A sold-out packet or a new heading is a field, not a code change. That is the same deal as any marketing website.",
-        "Stay on the slide. Do not click the site.",
+        "4 · Why this shape",
+        "Documents, composition, editor fields, stable tracking.",
+        "Icehouse is one record reused everywhere. Homepage is an ordered section array. GTM keys off eventId, not button copy.",
+        "If they ask why not a 2×3 grid: that is a SaaS homepage. This is a catalog.",
     ),
     (
-        "5 · What visitors see",
-        "You are touring the public site the way a visitor sees it.",
-        "Four pages: homepage (blocks from the CMS), varieties (the catalog), journal (seasonal notes), mail order (a letter, not a shopping cart). Studio exists, but it is not linked in the footer — the storefront should feel like a real catalog.",
-        "Point at the four screenshot cards.",
+        "5 · Editor to production",
+        "Studio → GROQ → Next.js → ISR → catalog.",
+        "RSC pages. ISR about 60s plus a signed revalidate after publish. Local seed if Sanity is down.",
+        "GROQ is Sanity’s query language, not the AI company.",
     ),
     (
-        "6 · Why this shape",
-        "You are saying why this is not a generic marketing homework site.",
-        "Four ideas: (1) one Icehouse Tomato document reused everywhere, (2) homepage is an ordered list of sections, (3) marketers edit stock and price, (4) analytics uses a hidden event ID, not the button words.",
-        "If you forget a word, say: one record, many pages.",
+        "6 · Five documents",
+        "Farm settings, Catalog homepage, Variety, Journal note, Workshop.",
+        "Variety is the product object. Change Icehouse once; home, packet page, and order form follow.",
+        "Desk is labeled The farm.",
     ),
     (
-        "7 · Architecture",
-        "You are walking the path from editor to live page. Left to right.",
-        "Studio → GROQ query → Next.js page → ISR refresh → catalog. If Sanity is down, a local backup still shows the catalog. That is how the demo cannot die.",
-        "Do not open code unless they ask.",
+        "7 · Live demo — this is the talk",
+        "Home, Icehouse packet, publish a heading, CTA eventId.",
+        "Masthead is a section. Featured packet is a document. Publish is not a deploy. Label is copy; eventId is the contract.",
+        "Studio path if they ask: Catalog homepage → Catalog sections → Catalog masthead → Heading → Publish.",
     ),
     (
-        "8 · Content model",
-        "You are naming the five kinds of records in the CMS.",
-        "Farm settings (site chrome). Catalog homepage (ordered sections). Variety (the product). Journal note. Workshop. Change Icehouse once; home, packet page, and order form all follow.",
-        "Say the desk is labeled The farm — editors see a catalog, not a generic CMS.",
+        "8 · What I would defend",
+        "Five decisions: RSC+GROQ, references, eventId, ISR+webhook, no cart.",
+        "Server fetch. One document. Tracking survives a rewrite. Fresh after publish. A lead, not a fake checkout.",
+        "If Studio failed, local seed still rendered.",
     ),
     (
-        "9 · Live demo",
-        "This is the talk. Switch to the browser. Four clicks.",
-        "Home is live. Icehouse is the same document. You change a heading in Studio, publish, reload — it is live. The button text can change; the event ID cannot.",
-        "Practice this until you can do it without the notes.",
-    ),
-    (
-        "10 · What I would defend",
-        "You are listing five choices you would make again.",
-        "Fetch on the server. Do not copy the same tomato into three places. Track event IDs. Refresh after publish. No fake cart — a packet-list request is the lead.",
-        "If Studio failed in the demo, say the seed fallback still rendered.",
-    ),
-    (
-        "11 · Close",
-        "One sentence. Then stop if they only have ten minutes.",
+        "9 · Close",
+        "One sentence.",
         "The catalog is the product. The CMS is how it changes without a deploy.",
-        "Memorize this line. Do not add a new topic.",
+        "Stop here if they only have ten minutes. Past work is slides 10–15.",
     ),
     (
-        "12 · NDA map",
-        "You are introducing two live sites you cannot open internally.",
-        "Explain them like an ads business: who buys, what is inventory, how a visit becomes a sale. Jamb is a Pimlico dealer. Slingshot sells lab reagents. Public pages only.",
-        "Never open their Studio. Never invent field names.",
+        "10 · Work I cannot open",
+        "Jamb and Slingshot as public businesses. No Studio.",
+        "Who buys, what is inventory, how a visit becomes a sale. Then where Sanity sits.",
+        "Never invent field names.",
     ),
     (
-        "13 · Jamb business",
-        "You are explaining Jamb as a business, not as code.",
-        "Who: designers and collectors. Inventory: unique antiques plus handmade copies so a design survives after the antique sells. Sale: showroom enquiry, not Amazon. Sanity owns collections and journal stories.",
-        "The screenshot is the public homepage.",
+        "11 · Jamb — who buys, what sells",
+        "Designers and collectors. Antiques plus reproductions. Showroom enquiry.",
+        "Sanity owns collections and journal stories. Next.js is the storefront. I cannot open the desk.",
+        "Screenshot is the public homepage.",
     ),
     (
-        "14 · Jamb catalog",
-        "You are naming four public collections.",
-        "Fireplaces, lighting, furniture, journal. Same idea as Thorn & Furrow: collections in the CMS, storefront in Next.js.",
-        "Do not guess schema names. Say collections and stories.",
+        "12 · Jamb — four public collections",
+        "Fireplaces, lighting, furniture, journal.",
+        "Same contract as any marketing catalog. Do not name schemas.",
+        "Original Globe is the lighting story that started reproductions.",
     ),
     (
-        "15 · Slingshot business",
-        "You are explaining why labs buy cell mimics.",
-        "Who: flow cytometry labs. Problem: real donor cells expire and vary; plastic beads scatter wrong. Product: shelf-stable synthetic cells. Sale: find a control, read a protocol, order a vial. Repeat purchases.",
-        "The screenshot is How Mimics Work. Still no Studio.",
+        "13 · Slingshot — the control problem",
+        "Labs buy mimics because donor cells expire and beads scatter wrong.",
+        "Shelf-stable synthetic cells. Find a control, read a protocol, order a reagent. Repeat purchases.",
+        "How Mimics Work is the public argument. Still no Studio.",
     ),
     (
-        "16 · Slingshot catalog",
-        "You are naming the public surfaces.",
-        "Home = catalog. How Mimics Work = the argument. Shop = SKUs and a cart. Resources = notes and data sheets that help a scientist buy.",
-        "Same rule: I cannot open the desk.",
+        "14 · Slingshot — catalog, argument, shop",
+        "Home, How Mimics Work, shop.",
+        "Shop has a cart — that is their conversion, not Thorn & Furrow’s. Products and resources in Sanity.",
+        "I cannot open the desk.",
     ),
     (
-        "17 · Stop",
-        "You close the NDA section and invite questions on Thorn & Furrow.",
+        "15 · Stop",
+        "Questions on this catalog, not those studios.",
         "I cannot open those desks. This catalog I can.",
-        "Do not answer questions about Jamb or Slingshot internals. Redirect to this catalog.",
+        "Schema, caching, order form — here.",
     ),
 ]
 
@@ -410,25 +365,36 @@ def build_docx():
     add_para(doc, "Understand the talk, then read the script", size=26, bold=True, name="Georgia", space_after=4)
     add_para(
         doc,
-        "This guide is for a first-time presenter. Read it once slowly. Then practice with SCRIPT.txt. "
-        "You do not need to have written the code. You do need to understand the story.",
+        "This guide is for mentoring. The slides are Thorn-and-Furrow-Portfolio.pptx — 15 slides, that is the deck on the projector. "
+        "Give her For-the-Presenter.docx first. Then sit together: Studio, the four-click demo, SCRIPT.txt. "
+        "She does not need to have written the code. She does need to understand the story.",
         size=12,
         italic=True,
         color=MUTED,
         name="Georgia",
         space_after=12,
     )
+    add_table(
+        doc,
+        ["File", "What it is"],
+        [
+            ["Thorn-and-Furrow-Portfolio.pptx", "The deck. 15 slides. Put this on the projector."],
+            ["For-the-Presenter.docx", "What she reads before mentoring."],
+            ["SCRIPT.txt", "Word-for-word SAY / DO. After she understands the slides."],
+            ["Interview-Assistant-Note.txt", "Panel questions and answers. Paste into the interview copilot."],
+        ],
+    )
 
     add_heading(doc, "For the mentor (read this first)")
     add_para(
         doc,
-        "Coach the opening first: not a SaaS, then Next.js / Sanity / Vercel. Then the catalog. If she can say that in her own words, the rest of the talk has a frame.",
+        "Coach the opening from the real deck: title, then “I own the types, they own the catalog.” Then what visitors see.",
     )
     for item in [
-        "Before Studio: have her explain SaaS vs this site, then the three tools, with no slides.",
-        "Then open /studio. Let her change the masthead heading and publish. That loop is the talk.",
+        "Before Studio: have her say what the catalog is, and what she owns versus marketing, with the Portfolio.pptx slides in front of her.",
+        "Then open /studio. Walk Catalog homepage → Catalog sections → Catalog masthead → Heading → Publish → reload /. That loop is the talk.",
         "Have her explain Jamb and Slingshot out loud using only who / inventory / sale. Stop her if she starts inventing field names.",
-        "First rehearsal: she reads SCRIPT.txt. Second rehearsal: she uses only the slides. Third: you interrupt with questions.",
+        "First rehearsal: she reads SCRIPT.txt. Second rehearsal: she uses only Thorn-and-Furrow-Portfolio.pptx. Third: you interrupt with questions.",
         "If she freezes, the rescue line is: “The catalog is the product. The CMS is how it changes without a deploy.”",
     ]:
         add_bullet(doc, item)
@@ -451,14 +417,14 @@ def build_docx():
     )
     add_para(doc, "Your job in the room is three things, in this order:", size=11, bold=True, space_before=8, space_after=4)
     for item in [
-        "1. Tell them what this is: marketing site, not SaaS. Stack: Next.js, Sanity, Vercel.",
+        "1. Title and types: live catalog on Next.js and Sanity. I own the types; they own the weekly catalog.",
         "2. Walk Thorn & Furrow live: homepage, Icehouse Tomato, publish a heading, event ID on the button.",
         "3. If there is time: Jamb and Slingshot as public businesses only. No Studio.",
     ]:
         add_bullet(doc, item)
 
-    add_heading(doc, "Not a SaaS — the difference")
-    add_para(doc, "This is the first idea they need to hear. Point at slide 2.")
+    add_heading(doc, "If they ask whether this is a SaaS")
+    add_para(doc, "This comparison is not on the deck. Use it only if the panel asks.")
     add_table(
         doc,
         ["A normal SaaS", "This site (marketing catalog)"],
@@ -477,14 +443,15 @@ def build_docx():
         color=MUTED,
     )
 
-    add_heading(doc, "The stack — three tools")
-    add_para(doc, "Memorize these three sentences. They are slide 3.")
+    add_heading(doc, "What the title names")
+    add_para(doc, "Slide 1 footer: Next.js App Router, Sanity, TypeScript. Slide 5 is where Studio, GROQ, Next.js, and ISR appear. Vercel is the host of the live catalog URL on slide 2 — not its own slide.")
     add_table(
         doc,
         ["Tool", "What it is", "What you say"],
         [
             ["Next.js", "The website framework (React, App Router).", "Next.js is the site — what visitors see."],
             ["Sanity", "The CMS. Studio is the editor at /studio.", "Sanity is the CMS. Packets are documents, not a Word file."],
+            ["TypeScript", "Types shared between Studio fields and pages.", "The types stay honest between CMS and site."],
             ["Vercel", "The host. Git push → live URL, CDN, ISR.", "Vercel is where it deploys. That is production."],
         ],
     )
@@ -495,7 +462,7 @@ def build_docx():
         space_before=4,
     )
 
-    add_heading(doc, "The one idea (after the stack)")
+    add_heading(doc, "The one idea")
     add_para(
         doc,
         "The catalog is the product. The CMS is how it changes without a deploy.",
@@ -548,38 +515,37 @@ def build_docx():
             ["ISR", "Pages refresh about every 60 seconds. A signed revalidate call after publish means we do not wait a full minute."],
             ["eventId", "A hidden name on a button (hero_order, nav_order). Analytics listens to the ID, not the words on the button."],
             ["Mail order / no cart", "Visitors mark packets and tell us their zone. We write back. That is a marketing lead, not a fake checkout."],
+            ["Publish vs deploy", "Publish = save live in Studio. Deploy = git push new code. Changing a heading is publish, not deploy."],
             ["Seed fallback", "If Sanity is down, local backup content still renders the catalog. The demo does not go blank."],
         ],
     )
 
-    add_heading(doc, "How the 17 slides fit")
-    add_para(doc, "Slides 1–11 are the 10-minute talk (start with not-SaaS and the stack). Stop at slide 11 if that is all the time. Slides 12–17 are extra past work.")
+    add_heading(doc, "How the 15 slides fit")
+    add_para(doc, "Thorn-and-Furrow-Portfolio.pptx is 15 slides. Ten minutes is 1–9. Slides 10–15 are past work if they have time.")
     add_table(
         doc,
         ["Time", "Slide", "In one sentence"],
         [
-            ["0:00–0:25", "1 Title", "Marketing site, not SaaS. This catalog I can open."],
-            ["0:25–1:05", "2 Not a SaaS", "Login app vs public catalog. Lead, not signup."],
-            ["1:05–1:50", "3 The stack", "Next.js = site. Sanity = CMS. Vercel = deploy."],
-            ["1:50–2:25", "4 The job", "I own the types. They own the catalog."],
-            ["2:25–3:00", "5 Product", "Four public pages. No cart."],
-            ["3:00–3:35", "6 Why this shape", "Documents, sections, fields, event IDs."],
-            ["3:35–4:25", "7 Architecture", "Studio → GROQ → Next.js → live catalog."],
-            ["4:25–5:00", "8 Content model", "Five document types. Change Icehouse once."],
-            ["5:00–7:40", "9 Live demo", "This is the talk. Four clicks."],
-            ["7:40–8:20", "10 Decisions", "Five choices I would make again."],
-            ["8:20–8:50", "11 Close", "The memorized line. Stop if time is up."],
-            ["8:50–9:05", "12 NDA map", "Two public sites. No Studio."],
-            ["9:05–9:40", "13 Jamb business", "Who buys, what sells, how it sells."],
-            ["9:40–10:10", "14 Jamb catalog", "Fireplaces, lighting, furniture, journal."],
-            ["10:10–10:45", "15 Slingshot business", "The control problem, then the product."],
-            ["10:45–11:15", "16 Slingshot catalog", "Home, argument, shop."],
-            ["11:15–11:30", "17 Stop", "Questions on this catalog, not those desks."],
+            ["0:00–0:40", "1 Title", "Live catalog on Next.js and Sanity. Product, model, publish loop."],
+            ["0:40–1:30", "2 I own the types", "They own the weekly catalog. Season is a document."],
+            ["1:30–2:10", "3 What visitors see", "Four public pages. No cart. Studio not linked."],
+            ["2:10–2:50", "4 Why this shape", "Documents, sections, fields, event IDs."],
+            ["2:50–3:35", "5 Editor to production", "Studio → GROQ → Next.js → ISR → catalog."],
+            ["3:35–4:10", "6 Five documents", "Change Icehouse once. Every surface follows."],
+            ["4:10–6:40", "7 Live demo", "Home, packet, publish, tracking."],
+            ["6:40–7:20", "8 Decisions", "Five choices I would make again."],
+            ["7:20–7:45", "9 Close", "The memorized line. Stop if time is up."],
+            ["7:45–8:00", "10 Work I cannot open", "Jamb and Slingshot. Public only."],
+            ["8:00–8:35", "11 Jamb business", "Who, inventory, sale."],
+            ["8:35–9:05", "12 Jamb collections", "Fireplaces, lighting, furniture, journal."],
+            ["9:05–9:40", "13 Slingshot problem", "The control, then the product."],
+            ["9:40–10:10", "14 Slingshot catalog", "Home, argument, shop."],
+            ["10:10–10:25", "15 Stop", "Questions on this catalog, not those desks."],
         ],
     )
     add_para(
         doc,
-        "If you run long: skip slide 10, say the close line, take questions. Do not skip slides 2 and 3 — that is how the room knows what you are presenting.",
+        "If you run long: skip slide 8 (decisions), say the close line, take questions. Past work is 10–15.",
         italic=True,
         color=MUTED,
     )
@@ -602,18 +568,72 @@ def build_docx():
         add_para(doc, coach, italic=True, color=MUTED, space_after=10)
 
     add_heading(doc, "Live demo — four clicks (practice this)")
-    add_para(doc, "Before you start: catalog at http://localhost:3000 and Studio at http://localhost:3000/studio, already logged in. Hard-refresh once.")
+    add_para(
+        doc,
+        "Before you start: catalog at http://localhost:3000 and Studio at http://localhost:3000/studio, already logged in. Hard-refresh once. "
+        "Footer should read Content: Sanity live. If it says local seed, Studio edits will not show on the public site.",
+    )
     add_table(
         doc,
         ["Step", "You click", "You say"],
         [
             ["1", "Homepage /", "Catalog Number 14. The masthead is a section. The featured packet is a document, not a widget. The sowing table is editorial. The spring list is seventeen references."],
             ["2", "Icehouse Tomato", "Same document you just saw featured."],
-            ["3", "Studio → Catalog homepage → masthead heading → Publish → reload /", "The heading is live. That publish loop is the work."],
+            ["3", "Studio → Catalog homepage → Catalog sections → Catalog masthead → Heading → Publish → reload /", "The heading is live. Marketing changed a field. Engineering did not ship a build."],
             ["4", "Hover Request a packet list", "The label is copy. The contract is eventId — hero_order, nav_order. Copy can change. GTM does not."],
         ],
     )
     add_para(doc, "If Studio fails: keep going on the public site. Say the local seed still renders the catalog. Do not apologize for a long time.")
+
+    add_heading(doc, "How to change content in Studio")
+    add_para(
+        doc,
+        "This is the part they will ask her to do live. Coach it until the clicks are muscle memory. "
+        "Draft is not live. She must click Publish, then reload the public catalog. That is not a deploy.",
+    )
+    add_para(doc, "Open http://localhost:3000/studio. Left desk title is The farm.", bold=True, space_before=4)
+    add_para(doc, "List: Catalog homepage, Farm settings, then Varieties, Journal, Workshops.")
+    add_para(doc, "The demo edit — click by click", size=13, bold=True, name="Georgia", space_before=10, space_after=4)
+    add_table(
+        doc,
+        ["Step", "Click", "Note"],
+        [
+            ["1", "Catalog homepage (left)", "One document. The homepage is not a Word file."],
+            ["2", "Catalog sections", "An ordered list of blocks. Editors can drag to reorder."],
+            ["3", "Catalog masthead", "First section on the live home."],
+            ["4", "Heading", "Change this. Leave Catalog No and Season unless they ask."],
+            ["5", "Publish", "Bottom-right or top. Grey button = a required field is empty."],
+            ["6", "Reload http://localhost:3000", "Hard-refresh. The new heading is live. No git push."],
+        ],
+    )
+    add_para(
+        doc,
+        "What she says while clicking: “Studio is the editor. The desk is labeled The farm so it looks like a catalog, not a generic CMS. I change a field and publish. Next.js pulls it. No deploy.”",
+        italic=True,
+        color=MUTED,
+    )
+    add_para(doc, "If they ask her to change something else", size=13, bold=True, name="Georgia", space_before=10, space_after=4)
+    add_table(
+        doc,
+        ["They ask", "Path", "She says"],
+        [
+            ["Featured packet", "Catalog homepage → Catalog sections → Featured variety → Variety → pick another packet → Publish", "Same homepage document. The feature is a reference, not a paste."],
+            ["Reorder the home", "Catalog homepage → Catalog sections → drag blocks → Publish", "Editors compose the page. I own the section types."],
+            ["Packet stock or price", "Varieties → Icehouse Tomato → Stock or Packet → Publish", "One document. Home, packet page, and order form all pick it up."],
+            ["Packet story / latin", "Same Variety document: Common name, Latin name, Days to maturity, Sowing, Isolation, Kitchen use, Packet photograph", "I do not paste Icehouse in three places."],
+            ["Button words", "Catalog masthead → Call to action → Label. Do not touch Analytics event ID (hero_order / nav_order)", "Copy can change. GTM does not."],
+            ["Farm name / nav", "Farm settings", "Site chrome. Nav is label plus href."],
+            ["Journal", "Journal → open a note → Title / Excerpt / Body → Publish", "Seasonal notebook, not a blog calendar."],
+            ["Workshop", "Workshops → open one → Title, Date, Place, Seats, Notes → Publish", "Field days. Same publish loop."],
+            ["Add a packet", "Varieties → Create → Common name, Latin name, slug (Generate), family, story → Publish. Then Catalog homepage → Variety index → add reference", "New document, then point the index at it."],
+        ],
+    )
+    add_para(
+        doc,
+        "Do not type raw HTML. Do not invent new section types. Unknown section types are skipped on the site. "
+        "If the public footer still says local seed after Publish, the catalog is not reading Studio — do not claim the edit went live.",
+        space_before=4,
+    )
 
     add_heading(doc, "Jamb and Slingshot in four lines each")
     add_para(doc, "Jamb", size=13, bold=True, name="Georgia", space_before=4, space_after=4)
@@ -638,6 +658,8 @@ def build_docx():
         doc,
         ["Question", "Answer in one breath"],
         [
+            ["How do you change the homepage?", "Studio → Catalog homepage → Catalog sections → Catalog masthead → Heading → Publish → reload /. No deploy."],
+            ["How do you change a packet?", "Varieties → Icehouse Tomato → Stock, Packet, or Story → Publish. One document. Home, packet page, and order form all update."],
             ["Is this a SaaS?", "No. Nobody logs in. It is a public marketing catalog. The conversion is a lead, not a subscription."],
             ["Can you show Jamb or Slingshot Studio?", "No. NDA. I can name the business and which public surfaces Sanity feeds. Thorn & Furrow is the walkthrough."],
             ["How does the homepage work?", "An ordered Sanity array. The UI switches on section type. Editors reorder blocks."],
@@ -652,9 +674,9 @@ def build_docx():
     add_heading(doc, "Before you walk in")
     for item in [
         "Memorize the close line.",
-        "Do the four demo clicks twice without notes.",
-        "Read SCRIPT.txt out loud once. Then put it down and use the slides.",
-        "If you only have ten minutes: slides 1–9. If they ask about past work: 10–15.",
+        "Do the four demo clicks twice without notes. Then change Icehouse stock once so she feels the same document on three pages.",
+        "Read SCRIPT.txt out loud once. Then put it down and use Thorn-and-Furrow-Portfolio.pptx.",
+        "If you only have ten minutes: slides 1–9. Skip 8 if long. Past work is 10–15.",
         "Breathe. Point at the screen. Finish the sentence if they interrupt, then answer.",
     ]:
         add_bullet(doc, item)
@@ -670,7 +692,7 @@ def build_docx():
     )
     add_para(
         doc,
-        "Word-for-word lines: SCRIPT.txt in this folder. Deck: Thorn-and-Furrow-Portfolio.pptx",
+        "Slides (the file on the projector): Thorn-and-Furrow-Portfolio.pptx. She reads first: For-the-Presenter.docx. Word-for-word lines: SCRIPT.txt. Interview copilot note: Interview-Assistant-Note.txt. Do not use Thorn-and-Furrow-Deck.pptx — that is only a fallback if Portfolio.pptx was locked.",
         size=9,
         color=MUTED,
     )
@@ -683,13 +705,13 @@ def build_docx():
 def build_script_txt():
     lines = [
         "THORN & FURROW — SPEAKING SCRIPT",
-        "Read SAY out loud. Follow DO. Ten minutes is slides 1–11. Slides 12–17 if they have time.",
+        "Read SAY out loud. Follow DO. Ten minutes is slides 1–9. Slides 10–15 if they have time.",
         "",
         "BEFORE YOU START",
         "- Catalog: http://localhost:3000",
         "- Studio: http://localhost:3000/studio (already logged in)",
         "- Hard-refresh once. If Studio fails, keep going on the public site.",
-        "- If you run long, skip slide 10, say the close line, take questions. Do not skip slides 2 and 3.",
+        "- If you run long, skip slide 8, say the close line, take questions.",
         "",
         "MEMORIZE THIS LINE",
         "The catalog is the product. The CMS is how it changes without a deploy.",
