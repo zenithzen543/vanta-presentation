@@ -2,6 +2,8 @@ import { notFound } from "next/navigation"
 import { PageShell } from "@/components/PageShell"
 import { getJournal, getJournalNote } from "@/lib/data"
 
+export const revalidate = process.env.NODE_ENV === "development" ? 0 : 60
+
 export async function generateStaticParams() {
   const notes = await getJournal()
   return notes.filter((n) => n.slug).map((n) => ({ slug: n.slug }))

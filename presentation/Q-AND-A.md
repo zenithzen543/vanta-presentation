@@ -19,4 +19,4 @@ Typed sections, required fields, no raw HTML. Unknown `_type` is skipped.
 Map collections (varieties, journal, events) first. Redirects and titles travel with documents.
 
 **Previous code?**  
-NDA. Public URLs plus this catalog.
+Jamb and Slingshot: NDA. Public URLs only. Thorn & Furrow: not NDA, but still no source — live catalog and Studio only.

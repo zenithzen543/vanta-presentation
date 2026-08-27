@@ -1,7 +1,7 @@
 import { seed } from "@/lib/content/seed"
 import type { HomePage, JournalNote, PageData, SiteSettings, Variety, Workshop } from "@/lib/types"
 import { isSanityConfigured } from "@/sanity/env"
-import { client } from "@/sanity/lib/client"
+import { sanityFetch } from "@/sanity/live"
 import {
   allJournalQuery,
   allVarietiesQuery,
@@ -10,15 +10,6 @@ import {
   journalBySlugQuery,
   varietyBySlugQuery,
 } from "@/sanity/lib/queries"
-
-function fetchOpts(tags: string[]) {
-  return {
-    next: {
-      revalidate: process.env.NODE_ENV === "development" ? 0 : 60,
-      tags,
-    },
-  }
-}
 
 function allSeedVarieties(): Variety[] {
   const section = seed.home.sections.find((item) => item._type === "varietyIndex")
@@ -99,81 +90,81 @@ const CATALOG_TYPES = new Set([
   "letterCta",
 ])
 
-function isCatalogPayload(settings: SiteSettings, home: HomePage) {
-  const hasCatalogSection = home.sections.some((section) => CATALOG_TYPES.has(section._type))
-  const hasFarmSettings = Boolean(settings.place && settings.footerNote && settings.nav?.length)
-  return hasCatalogSection && hasFarmSettings
+function mergeSettings(fetched?: Partial<SiteSettings> | null): SiteSettings {
+  return {
+    ...seed.settings,
+    ...fetched,
+    nav: fetched?.nav?.length ? fetched.nav : seed.settings.nav,
+    cta: fetched?.cta?.href ? fetched.cta : seed.settings.cta,
+    defaultSeo: { ...seed.settings.defaultSeo, ...fetched?.defaultSeo },
+  }
+}
+
+async function fetchQuery<T>(query: string, params?: Record<string, unknown>, tags: string[] = []): Promise<T | null> {
+  try {
+    const { data } = await sanityFetch({
+      query,
+      ...(params ? { params } : {}),
+      stega: false,
+      perspective: "published",
+      tags,
+    })
+    return (data ?? null) as T | null
+  } catch {
+    return null
+  }
 }
 
 export async function getPageData(): Promise<PageData> {
   if (!isSanityConfigured) return seed
-  try {
-    const result = await client.fetch<Pick<PageData, "settings" | "home">>(homeQuery, {}, fetchOpts(["home"]))
-    if (!result?.home?.sections?.length || !result.settings || !isCatalogPayload(result.settings, result.home)) {
-      return { ...seed, source: "fallback" }
-    }
-    return { ...result, home: normalizeHome(result.home), source: "sanity" }
-  } catch {
+  const result = await fetchQuery<Pick<PageData, "settings" | "home">>(homeQuery, undefined, ["home"])
+  const home = result?.home
+  if (!home?.sections?.length || !home.sections.some((section) => CATALOG_TYPES.has(section._type))) {
     return { ...seed, source: "fallback" }
+  }
+  return {
+    settings: mergeSettings(result?.settings),
+    home: normalizeHome(home),
+    source: "sanity",
   }
 }
 
 export async function getVariety(slug: string): Promise<Variety | null> {
   const seeded = allSeedVarieties().find((item) => item.slug === slug) ?? null
   if (!isSanityConfigured) return seeded
-  try {
-    const variety = await client.fetch(varietyBySlugQuery, { slug }, fetchOpts(["varieties"]))
-    if (!variety) return seeded
-    return mergeVariety(variety, seeded)
-  } catch {
-    return seeded
-  }
+  const variety = await fetchQuery<Partial<Variety>>(varietyBySlugQuery, { slug }, ["varieties"])
+  if (!variety) return seeded
+  return mergeVariety(variety, seeded)
 }
 
 export async function getVarieties(): Promise<Variety[]> {
   const seeded = allSeedVarieties()
   if (!isSanityConfigured) return seeded
-  try {
-    const list = await client.fetch<Variety[]>(allVarietiesQuery, {}, fetchOpts(["varieties"]))
-    if (!list?.length) return seeded
-    return list
-      .map((item) => mergeVariety(item, seeded.find((row) => row.slug === item.slug) ?? null))
-      .filter((item): item is Variety => Boolean(item))
-  } catch {
-    return seeded
-  }
+  const list = await fetchQuery<Variety[]>(allVarietiesQuery, undefined, ["varieties"])
+  if (!list?.length) return seeded
+  return list
+    .map((item) => mergeVariety(item, seeded.find((row) => row.slug === item.slug) ?? null))
+    .filter((item): item is Variety => Boolean(item))
 }
 
 export async function getJournalNote(slug: string): Promise<JournalNote | null> {
   const seeded = allSeedNotes().find((item) => item.slug === slug) ?? null
   if (!isSanityConfigured) return seeded
-  try {
-    const note = await client.fetch(journalBySlugQuery, { slug }, fetchOpts(["journal"]))
-    if (!note) return seeded
-    return { ...note, href: `/journal/${note.slug}` }
-  } catch {
-    return seeded
-  }
+  const note = await fetchQuery<JournalNote>(journalBySlugQuery, { slug }, ["journal"])
+  if (!note) return seeded
+  return { ...note, href: `/journal/${note.slug}` }
 }
 
 export async function getJournal(): Promise<JournalNote[]> {
   const seeded = allSeedNotes()
   if (!isSanityConfigured) return seeded
-  try {
-    const list = await client.fetch<JournalNote[]>(allJournalQuery, {}, fetchOpts(["journal"]))
-    return list?.length ? list : seeded
-  } catch {
-    return seeded
-  }
+  const list = await fetchQuery<JournalNote[]>(allJournalQuery, undefined, ["journal"])
+  return list?.length ? list : seeded
 }
 
 export async function getWorkshops(): Promise<Workshop[]> {
   const seeded = allSeedWorkshops()
   if (!isSanityConfigured) return seeded
-  try {
-    const list = await client.fetch<Workshop[]>(allWorkshopsQuery, {}, fetchOpts(["workshops"]))
-    return list?.length ? list : seeded
-  } catch {
-    return seeded
-  }
+  const list = await fetchQuery<Workshop[]>(allWorkshopsQuery, undefined, ["workshops"])
+  return list?.length ? list : seeded
 }

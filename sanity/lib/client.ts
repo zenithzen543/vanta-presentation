@@ -5,6 +5,6 @@ export const client = createClient({
   projectId: projectId || "placeholder",
   dataset,
   apiVersion,
-  useCdn: process.env.NODE_ENV === "production",
+  useCdn: false,
   perspective: "published",
 })

@@ -2,6 +2,8 @@ import { PageShell } from "@/components/PageShell"
 import { OrderForm } from "@/components/OrderForm"
 import { getVarieties } from "@/lib/data"
 
+export const revalidate = process.env.NODE_ENV === "development" ? 0 : 60
+
 export const metadata = { title: "Request a packet list" }
 
 export default async function OrderPage({

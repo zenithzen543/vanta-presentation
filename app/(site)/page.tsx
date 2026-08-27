@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import { Sections } from "@/components/home/Sections"
 import { getPageData } from "@/lib/data"
 
-export const revalidate = 60
+export const revalidate = process.env.NODE_ENV === "development" ? 0 : 60
 
 export async function generateMetadata(): Promise<Metadata> {
   const { home, settings } = await getPageData()

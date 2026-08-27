@@ -40,7 +40,7 @@ Click **Icehouse Tomato**. Open **Varieties** to show families. Mark packets on 
 1. Desk: Catalog homepage, Farm settings, Varieties, Journal, Workshops.
 2. **Catalog homepage → sections → Catalog masthead.** Change the heading. Publish.
 3. Open **Icehouse Tomato**: latin name, days, packet, story.
-4. Reload `/`. The new heading is live.
+4. Reload `/`. The new heading is live. With the catalog tab left open, publish can also refresh the page without a reload.
 
 That publish loop is the interview.
 

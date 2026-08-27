@@ -2,6 +2,8 @@ import Link from "next/link"
 import { PageShell } from "@/components/PageShell"
 import { getJournal } from "@/lib/data"
 
+export const revalidate = process.env.NODE_ENV === "development" ? 0 : 60
+
 export const metadata = { title: "Journal" }
 
 export default async function JournalPage() {
