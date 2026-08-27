@@ -5,7 +5,7 @@ import { getPageData } from "@/lib/data"
 import { isSanityConfigured } from "@/sanity/env"
 import { SanityLive } from "@/sanity/live"
 
-export const revalidate = process.env.NODE_ENV === "development" ? 0 : 60
+export const revalidate = 60
 
 export default async function SiteLayout({ children }: { children: ReactNode }) {
   const { settings, source } = await getPageData()

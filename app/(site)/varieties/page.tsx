@@ -3,7 +3,7 @@ import { PageShell } from "@/components/PageShell"
 import { groupByFamily } from "@/lib/catalog"
 import { getVarieties } from "@/lib/data"
 
-export const revalidate = process.env.NODE_ENV === "development" ? 0 : 60
+export const revalidate = 60
 
 export const metadata = { title: "Varieties" }
 

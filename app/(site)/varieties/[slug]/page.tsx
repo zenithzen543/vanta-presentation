@@ -6,7 +6,7 @@ import { VarietyCard } from "@/components/VarietyCard"
 import { relatedInFamily } from "@/lib/catalog"
 import { getVariety, getVarieties } from "@/lib/data"
 
-export const revalidate = process.env.NODE_ENV === "development" ? 0 : 60
+export const revalidate = 60
 
 export async function generateStaticParams() {
   const varieties = await getVarieties()
